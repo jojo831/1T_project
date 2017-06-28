@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fndroid.dao.UserDao">
+ 
+  <select id="findUserInfo" resultType="com.fndroid.entity.Relation">
+    select * from api_rlation limit 1;
+  </select>
+ 
+   <select id="findCityInfo" parameterType="string" resultType="com.fndroid.entity.City"  >
+   	 select * from city where code=#{code};
+  </select>
+  
+     <select id="findUserSql" parameterType="string" resultType="com.fndroid.entity.Relation"  >
+   	 select * from api_rlation where url=#{url};
+  </select>
+  
+  
+</mapper>
